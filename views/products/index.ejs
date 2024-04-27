@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Market</title>
+</head>
+
+<body>
+    <h1>
+        <%=cat %> products
+    </h1>
+
+    <ul>
+        <% for (let prod of products) {%>
+            <li>
+                <a href="/products/<%=prod._id %>">
+                    <%=prod.name %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+    <a href="/products/new"> sell your products</a>
+    <% if (cat!=="All" ) {%>
+
+        <a href="/products">view all Catagories</a>
+        <% } %>
+
+</body>
+
+</html>
